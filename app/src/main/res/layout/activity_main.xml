@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:id="@+id/topbar"
+     android:layout_height="35dp">
+     <ImageView
+         android:layout_width="30dp"
+         android:layout_height="30dp"
+         android:id="@+id/close"
+         android:layout_centerVertical="true"
+         android:layout_marginLeft="10dp"
+         android:src="@drawable/ic_baseline_close_24"/>
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="User Enrolment App"
+         android:layout_centerInParent="true"
+         android:textStyle="bold"
+         android:textSize="22sp"
+         android:textColor="#1F8EE0"/>
+
+ </RelativeLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:id = "@+id/tabs"
+        android:layout_below="@+id/topbar"
+        android:layout_width = "match_parent"
+        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+        android:layout_height = "wrap_content"
+        app:tabIndicatorColor="#1F8EE0"
+        app:tabSelectedTextColor="#1F8EE0"
+        app:tabGravity = "fill"
+        app:tabMaxWidth="0dp"
+        app:tabTextColor="#999999"/>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:id="@+id/sources"
+        android:layout_below="@+id/tabs"
+        android:layout_height="wrap_content"
+        app:layout_behavior = "@string/appbar_scrolling_view_behavior">
+    </androidx.viewpager.widget.ViewPager>
+
+</RelativeLayout>
